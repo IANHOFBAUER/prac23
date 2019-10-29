@@ -1,5 +1,7 @@
 package prac23;
 
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -280,10 +282,15 @@ public class Inicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCalcCuadroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcCuadroActionPerformed
-       double lado = Double.parseDouble(txtLado.getText());
+       try{
+        double lado = Double.parseDouble(txtLado.getText());
        lado=lado*lado;
        lblAreaCuadro.setText(String.valueOf(lado));
-       txtLado.setText("");
+       txtLado.setText("");}
+       catch(Exception e){
+           JOptionPane.showMessageDialog(null,"Error, debes ingresar un valor");
+           
+       }
     }//GEN-LAST:event_btnCalcCuadroActionPerformed
 
     private void txtBaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBaseActionPerformed
@@ -291,26 +298,41 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_txtBaseActionPerformed
 
     private void btnCalcTrianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcTrianguloActionPerformed
+        try{
         double base = Double.parseDouble(txtBase.getText());
       double altura = Double.parseDouble(txtAltura.getText());
        lblAreaTrian.setText(String.valueOf(base*altura/2));
        txtBase.setText("");
-              txtAltura.setText("");
+              txtAltura.setText("");}
+        catch(NumberFormatException ef){
+          JOptionPane.showMessageDialog(null,"Error, debes ingresar un valor");               
+            
+        }
 
     }//GEN-LAST:event_btnCalcTrianguloActionPerformed
 
     private void btnCalcCirculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcCirculoActionPerformed
-          double radio = Double.parseDouble(txtRadio.getText());
+          try{
+        double radio = Double.parseDouble(txtRadio.getText());
        lblAreaCirculo.setText(String.valueOf(3.1416*(radio*radio)));
-       txtRadio.setText("");
+       txtRadio.setText("");}
+          catch(NumberFormatException eg){
+              JOptionPane.showMessageDialog(null,"Error, debes ingresar un valor");
+              
+          }
     }//GEN-LAST:event_btnCalcCirculoActionPerformed
 
     private void btnCalcRomboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcRomboActionPerformed
-          double dmayor = Double.parseDouble(txtDmayor.getText());
+          try{
+        double dmayor = Double.parseDouble(txtDmayor.getText());
       double dmenor = Double.parseDouble(txtDmenor.getText());
        lblAreaRombo.setText(String.valueOf(dmayor*dmenor/2));
        txtDmayor.setText("");
-       txtDmenor.setText("");
+       txtDmenor.setText("");}
+          catch(NumberFormatException eh){
+              JOptionPane.showMessageDialog(null,"Error, debes ingresar un valor");
+              
+          }
     }//GEN-LAST:event_btnCalcRomboActionPerformed
 
     /**
