@@ -75,6 +75,12 @@ public class Inicio extends javax.swing.JFrame {
 
         lblAreaCuadro.setText("Área");
 
+        txtLado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLadoActionPerformed(evt);
+            }
+        });
+
         txtBase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtBaseActionPerformed(evt);
@@ -334,6 +340,10 @@ public class Inicio extends javax.swing.JFrame {
               
           }
     }//GEN-LAST:event_btnCalcRomboActionPerformed
+
+    private void txtLadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLadoActionPerformed
 
     /**
      * @param args the command line arguments
